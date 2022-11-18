@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Este texto es el título del documento</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Este es un documento HTML5, CSS3 y algo de Javascript">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var visible = false;
+
+        function iniciar() {
+            var elemento = document.getElementById("menu-img");
+            elemento.addEventListener("click", mostrarMenu);
+        }
+
+        function mostrarMenu() {
+            var elemento = document.getElementById("menuprincipal");
+            if (!visible) {
+                elemento.style.display = "flex";
+                visible = true;
+            } else {
+                elemento.style.display = "none";
+                visible = false;
+            }
+        }
+        window.addEventListener("load", iniciar);
+    </script>
+</head>
+<body>
+    <header id="cabeceralogo">
+        <div>
+            <h1>Este es el título</h1>
+        </div>
+    </header>
+    <nav id="menuicono">
+        <img src="./assets/images/menulibre_103940.png" width="35" heigth="28" id="menu-img">
+    </nav>
+    <nav id="menuprincipal">
+        <div>
+            <ul>
+                <li><a href="#">Principal</a></li>
+                <li><a href="#">Fotos</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div>
+            <section id="articulosprincipales">
+                <article>
+                    <h1>Pampa Argentina</h1>
+                    <time datetime="2016-12-23 pudate">
+                        <div class="numerodia">23</div>
+                        <div class="nombredia">Viernes</div>
+                    </time>
+                    <p>Este es el texto de mi primer artículo</p>
+                    <figure>
+                        <img src="./assets/images/argentina.jpg">
+                    </figure>
+                </article>
+                <article>
+                    <h1>Cataratas</h1>
+                    <time datetime="2016-12-21 pudate">
+                        <div class="numerodia">21</div>
+                        <div class="nombredia">Miércoles</div>
+                    </time>
+                    <p>Este es el texto de mi primer artículo</p>
+                    <figure>
+                        <img src="./assets/images/pexels-tetyana-kovyrina-14185268.jpg">
+                    </figure>
+                </article>
+            </section>
+            <aside id="infoadicional">
+                <h1>Información Adicional</h1>
+                <p>Cita del Artículo uno</p>
+                <p>Cita del Artículo dos</p>
+            </aside>
+        </div>
+    </main>
+    <footer id="pielogo">
+        <div>
+            <section class="seccionpie">
+                <h1>Sitio Web</h1>
+                <li><a href="#">Principal</a></li>
+                <li><a href="#">Fotos</a></li>
+                <li><a href="#">Videos</a></li>
+            </section>
+
+            <section class="seccionpie">
+                <h1>Ayuda</h1>
+                <li><a href="#">Contacto</a></li>
+            </section>
+
+            <section class="seccionpie">
+                <address>Toronto, Canadá</address>
+                <small>&copy; Derechos Reservados 2016</small>
+            </section>
+        </div>
+    </footer>
+</body>
+</html>
